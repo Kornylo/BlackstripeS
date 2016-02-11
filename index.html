@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>black</title>
+ <link href="http://allfont.ru/allfont.css?fonts=compact" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon"href="img/logo.png">
+    <link href="intro/css/bootstrap.css" rel="stylesheet">
+    <link rel="Stylesheet" type="text/css" href="intro/css/style.css" /> 
+    <link rel="Stylesheet" type="text/css" href="intro/css/intro.css" /> 
+
+
+  </head>
+  <body class="background intro">
+
+    <div class="bg-box part-intro">
+      <div class="overlay"></div>
+    </div>
+
+<div class="preloader">
+   <div class="preloader-box">
+      <div>L</div>
+      <div>O</div>
+      <div>A</div>
+      <div>D</div>
+      <div>I</div>
+      <div>N</div>
+      <div>G</div>
+   </div>
+</div>
+    
+    <div id="wrapper" class="page-intro mCustomScrollbar" data-mcs-theme="minimal-dark">
+
+      
+
+      <div class="container-fluid page" id="intro">
+        <div class="row">
+          <div class="container">
+            <div class="logo-img">
+              <img src="intro/img/logo.png" alt="Home">
+            </div>
+            <p class="title">We have created an awesome Coming Soon Page</p>
+            <span class="select-demo">Select your demo</span>
+
+            <div class="row intro-demo">
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="intro-content">
+                  <a target="_blank" href="slider/index.html">
+                    <img class="replace-2x" src="intro/img/slider.png" alt="">
+                    <br><span>Background Slider</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="intro-content">
+                  <a target="_blank" href="default/index.html">
+                    <img class="replace-2x" src="intro/img/default.png" alt="">
+                    <br><span>Default</span>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="intro-content">
+                  <a target="_blank" href="video/index.html">
+                    <img class="replace-2x" src="intro/img/video.png" alt="">
+                    <br><span>Video Background</span>
+                  </a>
+                </div>
+              </div>
+    
+
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="intro-content">
+                  <a target="_blank" href="trianglify/index.html">
+                    <img class="replace-2x" src="intro/img/trianglify.png" alt="">
+                    <br><span>Trianglify Background</span>
+                  </a>
+                </div>
+              </div>
+
+
+
+
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="intro-content">
+                  <a target="_blank" href="matrix/index.html">
+                    <img class="replace-2x" src="intro/img/matrix.png" alt="">
+                    <br><span>Matrix Background</span>
+                  </a>
+                </div>
+              </div>
+
+
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="intro-content">
+                  <a target="_blank" href="gradient/index.html">
+                    <img class="replace-2x" src="intro/img/gradient.png" alt="">
+                    <br><span>Gradient Background</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div> <!-- /wrapper -->
+
+
+    <script src="intro/js/jquery.min.js"></script>
+    <script src="intro/js/bootstrap.js"></script>
+
+    <script src="intro/js/jquery.nicescroll.js"></script> 
+
+    <script>
+      $(".page-intro").niceScroll({
+        cursorcolor:"#000",
+        mousescrollstep:300
+      });
+      
+      if( 'devicePixelRatio' in window && window.devicePixelRatio >= 2 ){
+        var imgToReplace = $('img.replace-2x').get();
+       
+        for (var i=0,l=imgToReplace.length; i<l; i++) {
+          var src = imgToReplace[i].src;
+          src = src.replace(/\.(png|jpg|gif)+$/i, '@2x.$1');
+          imgToReplace[i].src = src;
+         
+          $(imgToReplace[i]).load(function(){
+            $(this).addClass('loaded');
+          });
+        }
+      }
+
+    </script>
+      <script >
+            $(window).load(function(){
+        $('.preloader').fadeOut('slow',function(){$(this).remove();});
+      });</script>
+    <!--<script src="js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
+
+
+
+    
+
+
+  </body>
+</html>
